@@ -19,7 +19,19 @@ All predictions was done with a 3 month horizon. Time series models were used to
 
 The notebook in this repository has all steps done and analysis troughtout it, including some EDA and Data Preparation process, modeling and than answers to our questions at the end.
 
-## Some limitations and next steps
+## Some considerations and Improvements
+
+Since the goal of this predicitons was to compare to the method done by ADW team now, it was decided to keep it more simple. But there are a few improvements that we can make to make predictions better and to consider other possibilities.
+
+- First off all we could use other time series models to benchmark and study other performances. This could have also be done with regression models. 
+- There is also cross validation techinque that could be used to evaluate model's performance over time. It is a relatively simple implementation that can imporve our performance.
+- We can also use more hierarchical levels, such as product category, color and size.
+- If more hierarchies are added, other reconciliation methods can be done in other to find the best fit.
+
+Besides improvements that can be done, there are a couple considerations on the current implementation:
+
+- From the data provided in the DW only sales performed to Stores (`customer_type = 'Store`) were considered, in order to facilitate analysis. But other category of customers could be added.
+- And products that were discontinued were not included in the dataset as well. Since we are studying demand prevision it wouldn't make sens to predict discontinued products.
 
 
 # Dashboard and Visualizations
